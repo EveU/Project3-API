@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyText
+  author: MyText
+  genre: MyText
+  language: MyText
+  difficulty_level: MyText
+  difficulty_desc: MyText
+  description: MyText
+
+two:
+  title: MyText
+  author: MyText
+  genre: MyText
+  language: MyText
+  difficulty_level: MyText
+  difficulty_desc: MyText
+  description: MyText
