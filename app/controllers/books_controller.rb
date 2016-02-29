@@ -18,6 +18,12 @@ class BooksController < ApplicationController
     render :json => book.to_json()
   end
 
+  def update
+    book = Book.find(params[:id])
+    book.update(book_params)
+    render :json => book.to_json
+  end
+
   def book_params
     params.require(:book).permit(:title, :author, :cover_image, :genre, :language, :difficulty_level, :difficulty_desc, :description)
   end
