@@ -24,6 +24,12 @@ class SongsController < ApplicationController
     render :json => song.to_json
   end
 
+  def destroy
+    song = Song.find(params[:id])
+    song.destroy
+    songs = Song.all
+    render :json => songs.to_json
+  end
 
   def song_params
     params.require(:song).permit(:title, :artist, :genre, :language, :difficulty, :description, :video_url)
