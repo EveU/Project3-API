@@ -13,6 +13,11 @@ class SongsController < ApplicationController
     render :json => songs.to_json()
   end
 
+  def show
+    song = Song.find(params[:id])
+    render :json => song.to_json()
+  end
+
 
   def song_params
     params.require(:song).permit(:title, :artist, :genre, :language, :difficulty, :description, :video_url)
